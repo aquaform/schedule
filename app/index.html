@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>OptimizedHTML 5</title>
+	<meta name="description" content="Startup HTML template OptimizedHTML 5">
+	<meta name="viewport" content="width=device-width">
+	<link rel="icon" href="images/favicon.png">
+	<meta property="og:image" content="images/dest/preview.jpg">
+	<link rel="stylesheet" href="css/app.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <header>
+		<div class="collapse mt-4" id="navbarHeader">
+			<div class="container">
+				<div class="row">
+					<div class="card mb-2 shadow-sm p-0" style="width: 200px;">							
+						<div class="card-body p-0">
+							<form method="POST" id='addTable' name='addTable'>					
+								<div id="spSel">
+								<!--<h3 class="selectorTitle spTitle" style="font-size: 1.2vw; margin-bottom: 3%;">ПОДРАЗДЕЛЕНИЕ</h3>-->
+									<input type="radio" class="spInput" id="secondSP" name="spSel" value="2" onClick="showCourse(2)" hidden disabled >
+									<label for="secondSP" class="group course" alt="СП-1">Сп-1</label>
+									<br>
+									<input type="radio" class="spInput" id="secondSP" name="spSel" value="2" onClick="showCourse(2)" hidden disabled >
+									<label for="secondSP" class="group course" alt="СП-2">Сп-2</label>
+									<br>
+									<input type="radio" class="spInput" id="thirdSP" name="spSel" value="3" onClick="showCourse(3)" hidden disabled >
+									<label for="thirdSP" class="group course" alt="СП-3">Сп-3</label>
+									<br>
+									<input type="radio" class="spInput" id="forthSP" name="spSel" value="4" onClick="showCourse(4)" hidden>
+									<label for="forthSP" class="group course" alt="СП-4">Сп-4</label>
+								</div>
+								<br>
+								<div id="coursesSel" class="courses" style="display:none">
+									<!--<h3 class="selectorTitle courseTitle"  style="font-size: 1.2vw; margin-bottom: 3%;">КУРС</h3>-->
+									<input type="radio" class="courseInput" id="second" name="courseSel" value="2" onClick="getGorups(2, this.id)" hidden>
+									<label for="second" class="group course" alt="2 курс">2 курс</label>
+									<br>
+									<input type="radio" class="courseInput" id="third" name="courseSel" value="3" onClick="getGorups(3, this.id)" hidden>
+									<label for="third" class="group course" alt="3 курс">3 курс</label>
+									<br>
+									<input type="radio" class="courseInput" id="forth" name="courseSel" value="4" onClick="getGorups(4, this.id)" hidden>
+									<label for="forth" class="group course" alt="4 курс">4 курс</label>
+								</div><br>
+								<div id="groups" class="groupSelect"> 
+								</div><br>
+
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="navbar navbar-dark shadow-sm nav">
+			<div class="container-fluid d-flex justify-content-between">
+				<a href="#" class="d-flex align-items-center">
+					<svg width="156" height="79" viewBox="0 0 156 79" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<rect width="156" height="79" fill="#22539C"/>
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M50.6432 45.9915L129.313 46.0605V47.638L49.7246 47.7244L50.6432 45.9915Z" fill="white"/>
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M48.0165 50.9421L126.211 50.9453V52.3768L47.2715 52.3501L48.0165 50.9421Z" fill="white"/>
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M14 52.3502L28.6079 41.2228L59.0076 3L42.2673 41.1977L53.1897 41.2228L47.2913 52.3502H38.9464L30.2353 73.5092L24.5878 52.3517L14 52.3502Z" fill="white"/>
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M108.276 22.6238L115.524 22.6269L112.072 31.6054L122.78 22.6222L131.999 22.6128L119.429 33.5266L123.538 45.0087H114.337L110.487 35.8136L106.83 44.9758L99.3125 44.9695L108.276 22.6238Z" fill="white"/>
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M81.2534 22.6113L102.942 22.616L94.1978 44.9759L86.7304 44.9963L93.1655 28.6451H86.3185L80.0318 44.9774L72.4902 44.9727L81.2534 22.6113Z" fill="white"/>
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M76.1152 23.1748L72.949 31.0655C70.6809 28.4473 66.465 28.9009 63.3114 31.3308C61.1695 32.982 60.9344 35.6191 62.1892 36.9533C62.9642 37.7758 64.6009 38.1808 67.1895 37.6282C68.3007 37.3912 69.3929 36.856 71.0723 36.1794L68.0592 43.7232C66.7491 44.6195 59.2644 46.4529 55.6373 43.9477C54.0226 42.8332 53.2287 40.6247 53.2208 39.0582C53.2066 35.911 54.8797 31.8582 56.9316 29.1803C62.2255 22.2738 69.1609 20.8486 76.1152 23.1748Z" fill="white"/>
+						<path d="M57.9933 59.8595L58.8472 60.1295C58.7162 60.6036 58.4984 60.9552 58.1938 61.1843C57.8892 61.4135 57.5025 61.5297 57.0337 61.5297C56.4544 61.5297 55.9777 61.3334 55.6052 60.9395C55.2327 60.5455 55.0449 60.0071 55.0449 59.3243C55.0449 58.6022 55.2327 58.0403 55.6068 57.6416C55.9809 57.2429 56.4749 57.042 57.0858 57.042C57.6193 57.042 58.0533 57.199 58.3864 57.5129C58.5852 57.6981 58.7336 57.965 58.833 58.3118L57.9602 58.519C57.9081 58.2946 57.8008 58.1172 57.6366 57.9869C57.4725 57.8566 57.2736 57.7907 57.04 57.7907C56.7164 57.7907 56.4544 57.9069 56.2524 58.1376C56.0504 58.3684 55.9509 58.7419 55.9509 59.2599C55.9509 59.8093 56.0504 60.2002 56.2492 60.4325C56.4481 60.6648 56.7054 60.7825 57.0226 60.7825C57.2562 60.7825 57.4583 60.7087 57.6272 60.5596C57.796 60.4105 57.9192 60.1766 57.9933 59.8595Z" fill="white"/>
+						<path d="M59.6875 58.3101H60.5777L61.3338 60.5421L62.0724 58.3101H62.939L61.8231 61.3364L61.6242 61.8842C61.55 62.0678 61.4805 62.2075 61.4143 62.3048C61.348 62.4022 61.2706 62.4807 61.1854 62.5403C61.0986 62.5999 60.9928 62.647 60.8666 62.6816C60.7403 62.7145 60.5982 62.7318 60.4388 62.7318C60.2778 62.7318 60.12 62.7145 59.9653 62.6816L59.8911 62.0302C60.0221 62.0553 60.1405 62.0694 60.2447 62.0694C60.4388 62.0694 60.5824 62.0129 60.6756 61.8999C60.7687 61.7869 60.8397 61.6425 60.8902 61.4666L59.6875 58.3101Z" fill="white"/>
+						<path d="M63.8551 58.3101H64.6348V58.7716C64.7358 58.6131 64.8731 58.4859 65.0452 58.387C65.2172 58.2882 65.4098 58.2395 65.6197 58.2395C65.9875 58.2395 66.2984 58.3823 66.5541 58.668C66.8098 58.9537 66.9377 59.3524 66.9377 59.8641C66.9377 60.3884 66.8082 60.7965 66.551 61.0884C66.2937 61.3788 65.9812 61.5248 65.6134 61.5248C65.4382 61.5248 65.2804 61.4903 65.1383 61.4212C64.9963 61.3521 64.8463 61.2328 64.6901 61.0665V62.6502H63.8535V58.3101H63.8551ZM64.6822 59.8296C64.6822 60.1827 64.7532 60.4433 64.8937 60.6128C65.0341 60.7824 65.2062 60.8655 65.4082 60.8655C65.6024 60.8655 65.7649 60.7886 65.8928 60.6332C66.0206 60.4778 66.0869 60.2236 66.0869 59.8704C66.0869 59.5407 66.0206 59.2959 65.888 59.1358C65.7555 58.9757 65.5897 58.8956 65.394 58.8956C65.1888 58.8956 65.0199 58.9741 64.8842 59.1311C64.75 59.2896 64.6822 59.5219 64.6822 59.8296Z" fill="white"/>
+						<path d="M68.0566 58.3101H70.1906V58.9819H68.8932V61.4541H68.0566V58.3101Z" fill="white"/>
+						<path d="M70.7188 58.3101H71.609L72.365 60.5421L73.1037 58.3101H73.9702L72.8543 61.3364L72.6554 61.8842C72.5812 62.0678 72.5118 62.2075 72.4455 62.3048C72.3792 62.4022 72.3019 62.4807 72.2166 62.5403C72.1298 62.5999 72.0241 62.647 71.8978 62.6816C71.7715 62.7145 71.6295 62.7318 71.4701 62.7318C71.3091 62.7318 71.1512 62.7145 70.9965 62.6816L70.9224 62.0302C71.0534 62.0553 71.1717 62.0694 71.2759 62.0694C71.4701 62.0694 71.6137 62.0129 71.7068 61.8999C71.7999 61.7869 71.871 61.6425 71.9215 61.4666L70.7188 58.3101Z" fill="white"/>
+						<path d="M74.6895 58.3101H77.5495V58.9819H76.5378V61.4541H75.7012V58.9819H74.6895V58.3101Z" fill="white"/>
+						<path d="M81.214 59.2394L80.39 59.3869C80.3616 59.2237 80.2985 59.0997 80.2006 59.0165C80.1028 58.9333 79.9749 58.8925 79.8187 58.8925C79.6103 58.8925 79.4446 58.9647 79.3199 59.1075C79.1952 59.2504 79.1337 59.4905 79.1337 59.8249C79.1337 60.1984 79.1968 60.4606 79.3231 60.616C79.4493 60.7698 79.6182 60.8467 79.8297 60.8467C79.9891 60.8467 80.1186 60.8012 80.2196 60.7117C80.3206 60.6222 80.3916 60.4668 80.4342 60.2487L81.2566 60.3884C81.1714 60.7635 81.0072 61.0461 80.7657 61.2375C80.5242 61.429 80.1991 61.5248 79.7918 61.5248C79.3294 61.5248 78.9616 61.3804 78.6854 61.09C78.4108 60.7996 78.2734 60.3978 78.2734 59.8845C78.2734 59.3649 78.4108 58.9615 78.687 58.6727C78.9632 58.3839 79.3357 58.2395 79.806 58.2395C80.1912 58.2395 80.4974 58.3227 80.7247 58.4875C80.952 58.6523 81.1145 58.9019 81.214 59.2394Z" fill="white"/>
+						<path d="M82.3008 58.3102H83.1342V59.5958C83.2731 59.5801 83.3709 59.5377 83.4293 59.4686C83.4877 59.3995 83.5556 59.2489 83.6377 59.015C83.745 58.7058 83.8618 58.5064 83.9897 58.4201C84.1159 58.3337 84.2832 58.2898 84.49 58.2898C84.5531 58.2898 84.6636 58.2945 84.8199 58.3039L84.823 58.8549C84.6021 58.8549 84.4616 58.8753 84.4 58.9177C84.3385 58.9616 84.2722 59.0903 84.2012 59.3054C84.1033 59.5958 83.9644 59.7747 83.7813 59.8406C84.0449 59.9144 84.269 60.142 84.4505 60.525C84.46 60.5454 84.4711 60.5658 84.4837 60.5878L84.9509 61.4558H84.0512L83.6345 60.547C83.5493 60.3633 83.4751 60.2456 83.412 60.1938C83.3488 60.142 83.2573 60.1153 83.1342 60.1153V61.4558H82.3008V58.3102Z" fill="white"/>
+						<path d="M85.8477 58.3101H86.651V60.2847L87.9374 58.3101H88.7598V61.4541H87.9564V59.4449L86.6526 61.4557H85.8492V58.3101H85.8477Z" fill="white"/>
+						<path d="M90.084 58.3101H90.8874V60.2847L92.1738 58.3101H92.9961V61.4541H92.1927V59.4449L90.889 61.4557H90.0856V58.3101H90.084ZM92.087 57.0339H92.4942C92.4705 57.3023 92.3758 57.5127 92.2101 57.6665C92.0443 57.8203 91.8297 57.8957 91.5661 57.8957C91.3025 57.8957 91.0878 57.8188 90.9221 57.6665C90.7564 57.5143 90.6617 57.3023 90.638 57.0339H91.0452C91.0594 57.1736 91.1084 57.2804 91.1936 57.3526C91.2788 57.4248 91.4035 57.4609 91.5661 57.4609C91.7287 57.4609 91.8534 57.4248 91.9386 57.3526C92.0238 57.2804 92.0727 57.1752 92.087 57.0339Z" fill="white"/>
+						<path d="M55.1621 66.1694H57.9701V69.3135H57.1335V66.8412H55.9987V69.3135H55.1621V66.1694Z" fill="white"/>
+						<path d="M59.1699 67.6966C59.1699 67.4203 59.2378 67.1534 59.3751 66.8945C59.5124 66.6355 59.7066 66.4393 59.9575 66.3027C60.2085 66.1661 60.4894 66.0986 60.7988 66.0986C61.2771 66.0986 61.6685 66.2525 61.9747 66.5617C62.2809 66.8709 62.4324 67.2618 62.4324 67.7327C62.4324 68.2083 62.2778 68.6022 61.97 68.9146C61.6606 69.227 61.2723 69.3839 60.8051 69.3839C60.5147 69.3839 60.2385 69.318 59.9765 69.1877C59.7129 69.0575 59.514 68.8659 59.3767 68.6148C59.2378 68.3637 59.1699 68.0576 59.1699 67.6966ZM60.027 67.7405C60.027 68.0529 60.1012 68.2915 60.2495 68.4563C60.3979 68.6227 60.5826 68.7043 60.8004 68.7043C61.0182 68.7043 61.2013 68.6211 61.3497 68.4563C61.498 68.2899 61.5722 68.0497 61.5722 67.7342C61.5722 67.4266 61.498 67.1896 61.3497 67.0232C61.2013 66.8568 61.0182 66.7752 60.8004 66.7752C60.5826 66.7752 60.3979 66.8584 60.2495 67.0232C60.1012 67.1896 60.027 67.4281 60.027 67.7405Z" fill="white"/>
+						<path d="M63.6477 66.1694H66.4493V69.3135H65.616V66.8444H64.4764V68.2571C64.4764 68.6165 64.4353 68.8677 64.3517 69.0137C64.268 69.1581 64.1765 69.2538 64.0754 69.2993C63.9744 69.3449 63.8119 69.3668 63.5877 69.3668C63.4551 69.3668 63.2784 69.3496 63.0605 69.3135V68.7013C63.0779 68.7013 63.1253 68.7029 63.201 68.7076C63.2878 68.7139 63.3557 68.717 63.4031 68.717C63.5167 68.717 63.5861 68.6793 63.6114 68.6055C63.6367 68.5318 63.6509 68.3261 63.6509 67.9887V66.1694H63.6477Z" fill="white"/>
+						<path d="M67.7578 66.1694H68.5612V68.1441L69.8476 66.1694H70.6699V69.3135H69.8665V67.3027L68.5628 69.3135H67.7594V66.1694H67.7578Z" fill="white"/>
+						<path d="M71.6387 66.1694H74.5003V66.8412H73.4885V69.3135H72.652V66.8412H71.6402V66.1694H71.6387Z" fill="white"/>
+						<path d="M77.3158 68.3119L78.1492 68.4516C78.0419 68.7561 77.873 68.9868 77.641 69.1453C77.4089 69.3039 77.1201 69.3839 76.7729 69.3839C76.2236 69.3839 75.8163 69.205 75.5528 68.8487C75.3444 68.563 75.2402 68.202 75.2402 67.7656C75.2402 67.2445 75.3776 66.8364 75.6506 66.5413C75.9237 66.2462 76.2709 66.0986 76.6892 66.0986C77.1596 66.0986 77.5305 66.2525 77.802 66.5617C78.0734 66.8709 78.2044 67.3434 78.1918 67.9807H76.0957C76.102 68.2271 76.1683 68.4186 76.2978 68.5567C76.4272 68.6949 76.5882 68.7624 76.7807 68.7624C76.9117 68.7624 77.0222 68.7263 77.1106 68.6556C77.2022 68.585 77.27 68.4704 77.3158 68.3119ZM77.3632 67.4721C77.3569 67.2319 77.2953 67.0483 77.1753 66.9227C77.057 66.7971 76.9117 66.7343 76.7413 66.7343C76.5582 66.7343 76.4082 66.8003 76.2883 66.9321C76.1699 67.064 76.1099 67.2445 76.1131 67.4705H77.3632V67.4721Z" fill="white"/>
+						<path d="M78.8789 69.3135L80.0185 67.6936L78.9263 66.1694H79.9475L80.5078 67.0343L81.0965 66.1694H82.0783L81.0066 67.659L82.1762 69.3135H81.1486L80.5062 68.3387L79.8575 69.3135H78.8789Z" fill="white"/>
+						<path d="M83.125 66.1694H83.9615V67.3216H85.158V66.1694H85.9977V69.3135H85.158V67.9934H83.9615V69.3135H83.125V66.1694Z" fill="white"/>
+						<path d="M87.3047 66.1694H88.1081V68.1441L89.3945 66.1694H90.2168V69.3135H89.4134V67.3027L88.1097 69.3135H87.3063V66.1694H87.3047Z" fill="white"/>
+						<path d="M91.4606 66.1694H92.3066V66.9213C92.3066 67.0924 92.3224 67.2211 92.3523 67.3043C92.3823 67.3875 92.4486 67.4597 92.5496 67.5209C92.6491 67.5806 92.7769 67.612 92.9285 67.612C93.0768 67.612 93.2441 67.579 93.4288 67.5115V66.171H94.2653V69.315H93.4288V68.0593C93.1037 68.1456 92.8559 68.1896 92.6838 68.1896C92.4281 68.1896 92.1977 68.1347 91.9925 68.0248C91.7873 67.9149 91.6484 67.7752 91.5726 67.6041C91.4969 67.433 91.459 67.2054 91.459 66.9213V66.1694H91.4606Z" fill="white"/>
+						<path d="M97.4154 68.3119L98.2488 68.4516C98.1415 68.7561 97.9726 68.9868 97.7406 69.1453C97.5086 69.3039 97.2197 69.3839 96.8725 69.3839C96.3232 69.3839 95.916 69.205 95.6524 68.8487C95.444 68.563 95.3398 68.202 95.3398 67.7656C95.3398 67.2445 95.4772 66.8364 95.7502 66.5413C96.0233 66.2462 96.3705 66.0986 96.7888 66.0986C97.2592 66.0986 97.6301 66.2525 97.9016 66.5617C98.1731 66.8709 98.3041 67.3434 98.2914 67.9807H96.1953C96.2016 68.2271 96.2679 68.4186 96.3974 68.5567C96.5268 68.6949 96.6878 68.7624 96.8804 68.7624C97.0114 68.7624 97.1219 68.7263 97.2102 68.6556C97.3034 68.585 97.3697 68.4704 97.4154 68.3119ZM97.4644 67.4721C97.458 67.2319 97.3965 67.0483 97.2765 66.9227C97.1582 66.7971 97.0129 66.7343 96.8425 66.7343C96.6594 66.7343 96.5094 66.8003 96.3895 66.9321C96.2711 67.064 96.2111 67.2445 96.2143 67.4705H97.4644V67.4721Z" fill="white"/>
+						<path d="M102.138 67.0985L101.314 67.2461C101.285 67.0828 101.222 66.9588 101.124 66.8756C101.027 66.7924 100.899 66.7516 100.742 66.7516C100.534 66.7516 100.368 66.8238 100.244 66.9667C100.119 67.1095 100.057 67.3497 100.057 67.684C100.057 68.0576 100.121 68.3197 100.247 68.4751C100.373 68.6289 100.542 68.7058 100.754 68.7058C100.913 68.7058 101.042 68.6603 101.143 68.5709C101.244 68.4814 101.315 68.326 101.358 68.1078L102.18 68.2475C102.095 68.6227 101.931 68.9052 101.69 69.0967C101.448 69.2882 101.123 69.3839 100.716 69.3839C100.253 69.3839 99.8854 69.2395 99.6092 68.9491C99.3346 68.6588 99.1973 68.2569 99.1973 67.7436C99.1973 67.2241 99.3346 66.8207 99.6108 66.5319C99.887 66.243 100.26 66.0986 100.73 66.0986C101.115 66.0986 101.421 66.1818 101.648 66.3466C101.876 66.5115 102.038 66.761 102.138 67.0985Z" fill="white"/>
+						<path d="M103.225 66.1693H104.058V67.4549C104.197 67.4392 104.295 67.3968 104.353 67.3277C104.412 67.2587 104.479 67.108 104.562 66.8741C104.669 66.5649 104.786 66.3655 104.913 66.2792C105.04 66.1929 105.207 66.1489 105.414 66.1489C105.477 66.1489 105.587 66.1536 105.744 66.1631L105.747 66.714C105.526 66.714 105.385 66.7344 105.324 66.7768C105.262 66.8207 105.196 66.9495 105.125 67.1645C105.027 67.4549 104.888 67.6338 104.705 67.6998C104.969 67.7735 105.193 68.0011 105.374 68.3841C105.384 68.4045 105.395 68.4249 105.408 68.4469L105.875 69.3149H104.975L104.558 68.4061C104.473 68.2225 104.399 68.1047 104.336 68.0529C104.273 68.0011 104.181 67.9744 104.058 67.9744V69.3149H103.225V66.1693Z" fill="white"/>
+						<path d="M106.773 66.1694H107.577V68.1441L108.863 66.1694H109.686V69.3135H108.882V67.3027L107.578 69.3135H106.775V66.1694H106.773Z" fill="white"/>
+						<path d="M111.008 66.1694H111.811V68.1441L113.098 66.1694H113.92V69.3135H113.117V67.3027L111.813 69.3135H111.009V66.1694H111.008ZM113.011 64.8933H113.418C113.394 65.1617 113.3 65.3721 113.134 65.5259C112.968 65.6797 112.754 65.7551 112.49 65.7551C112.226 65.7551 112.012 65.6781 111.846 65.5259C111.68 65.3736 111.586 65.1617 111.562 64.8933H111.969C111.983 65.033 112.032 65.1397 112.117 65.212C112.203 65.2842 112.327 65.3203 112.49 65.3203C112.653 65.3203 112.777 65.2842 112.862 65.212C112.948 65.1397 112.997 65.033 113.011 64.8933Z" fill="white"/>
+						<path d="M55.1621 74.027H55.9955V75.3126C56.1344 75.2969 56.2323 75.2545 56.2907 75.1854C56.3475 75.1163 56.4169 74.9657 56.499 74.7318C56.6063 74.4226 56.7231 74.2232 56.851 74.1369C56.9773 74.0505 57.1446 74.0066 57.3513 74.0066C57.4145 74.0066 57.5249 74.0113 57.6812 74.0207L57.6844 74.5717C57.4634 74.5717 57.3229 74.5921 57.2614 74.6345C57.1998 74.6784 57.1335 74.8071 57.0625 75.0222C56.9646 75.3126 56.8257 75.4915 56.6426 75.5574C56.9062 75.6312 57.1304 75.8588 57.3119 76.2418C57.3213 76.2622 57.3324 76.2826 57.345 76.3046L57.8122 77.1726H56.9125L56.4958 76.2638C56.4106 76.0801 56.3364 75.9624 56.2733 75.9106C56.2102 75.8588 56.1186 75.8321 55.9955 75.8321V77.1726H55.1621V74.027Z" fill="white"/>
+						<path d="M58.5371 75.5542C58.5371 75.278 58.605 75.0111 58.7423 74.7521C58.8796 74.4931 59.0738 74.2969 59.3247 74.1604C59.5757 74.0238 59.8566 73.9563 60.166 73.9563C60.6442 73.9563 61.0357 74.1101 61.3419 74.4194C61.6481 74.7286 61.7996 75.1194 61.7996 75.5903C61.7996 76.0659 61.6449 76.4599 61.3372 76.7723C61.0278 77.0846 60.6395 77.2416 60.1723 77.2416C59.8819 77.2416 59.6057 77.1757 59.3437 77.0454C59.0801 76.9151 58.8812 76.7236 58.7439 76.4725C58.6066 76.2229 58.5371 75.9152 58.5371 75.5542ZM59.3942 75.5997C59.3942 75.9121 59.4684 76.1507 59.6167 76.3155C59.7651 76.4819 59.9498 76.5635 60.1676 76.5635C60.3854 76.5635 60.5685 76.4803 60.7169 76.3155C60.8652 76.1491 60.9394 75.909 60.9394 75.5935C60.9394 75.2858 60.8652 75.0488 60.7169 74.8824C60.5685 74.716 60.3854 74.6344 60.1676 74.6344C59.9498 74.6344 59.7651 74.7176 59.6167 74.8824C59.4684 75.0488 59.3942 75.2874 59.3942 75.5997Z" fill="white"/>
+						<path d="M63.0149 74.0271H65.8165V77.1711H64.9831V74.7021H63.8435V76.1147C63.8435 76.4742 63.8025 76.7253 63.7189 76.8713C63.6352 77.0157 63.5437 77.1115 63.4426 77.157C63.3416 77.2025 63.179 77.2245 62.9549 77.2245C62.8223 77.2245 62.6456 77.2072 62.4277 77.1711V76.559C62.4451 76.559 62.4924 76.5605 62.5682 76.5652C62.655 76.5715 62.7229 76.5747 62.7702 76.5747C62.8839 76.5747 62.9533 76.537 62.9786 76.4632C63.0038 76.3894 63.018 76.1838 63.018 75.8463V74.0271H63.0149Z" fill="white"/>
+						<path d="M67.3762 74.0271H70.1779V77.1711H69.3445V74.7021H68.2049V76.1147C68.2049 76.4742 68.1638 76.7253 68.0802 76.8713C67.9965 77.0157 67.905 77.1115 67.804 77.157C67.7029 77.2025 67.5404 77.2245 67.3162 77.2245C67.1837 77.2245 67.0069 77.2072 66.7891 77.1711V76.559C66.8064 76.559 66.8538 76.5605 66.9295 76.5652C67.0163 76.5715 67.0842 76.5747 67.1316 76.5747C67.2452 76.5747 67.3147 76.537 67.3399 76.4632C67.3652 76.3894 67.3794 76.1838 67.3794 75.8463V74.0271H67.3762Z" fill="white"/>
+						<path d="M73.2592 76.1712L74.0926 76.3109C73.9852 76.6154 73.8163 76.8462 73.5843 77.0047C73.3523 77.1633 73.0634 77.2433 72.7162 77.2433C72.1669 77.2433 71.7597 77.0644 71.4961 76.7081C71.2878 76.4224 71.1836 76.0614 71.1836 75.625C71.1836 75.1039 71.3209 74.6958 71.594 74.4007C71.8686 74.1056 72.2143 73.958 72.6326 73.958C73.1029 73.958 73.4738 74.1118 73.7453 74.4211C74.0168 74.7303 74.1478 75.2027 74.1352 75.84H72.0391C72.0454 76.0865 72.1117 76.278 72.2411 76.4161C72.3705 76.5542 72.5315 76.6217 72.7241 76.6217C72.8551 76.6217 72.9656 76.5856 73.054 76.515C73.1455 76.4428 73.2134 76.3282 73.2592 76.1712ZM73.3065 75.3299C73.3002 75.0897 73.2387 74.9061 73.1187 74.7805C73.0003 74.6549 72.8551 74.5922 72.6846 74.5922C72.5015 74.5922 72.3516 74.6581 72.2316 74.7899C72.1133 74.9218 72.0533 75.1023 72.0564 75.3283H73.3065V75.3299Z" fill="white"/>
+						<path d="M77.9172 77.1711H75.5244V77.9999H74.8457V76.4899H75.1882C75.3318 76.3314 75.4486 76.0849 75.5418 75.7506C75.6349 75.4163 75.6901 74.8402 75.7091 74.0271H78.2598V76.4899H78.5991V77.9999H77.9172V77.1711ZM77.4311 76.4899L77.4343 74.7115H76.4225C76.3894 75.5795 76.2505 76.1728 76.0058 76.4899H77.4311Z" fill="white"/>
+						<path d="M80.9692 77.171V75.8305C80.8603 75.8384 80.7845 75.8635 80.7419 75.9027C80.6993 75.9436 80.6235 76.0629 80.5178 76.2622L80.1184 77.171H79.2188L79.6654 76.303C79.8911 75.8682 80.1263 75.6202 80.371 75.5574C80.1879 75.4884 80.049 75.3094 79.9511 75.0222C79.8769 74.8071 79.8106 74.6784 79.7507 74.636C79.6907 74.5936 79.5486 74.5717 79.3261 74.5717V74.0207C79.4902 74.0113 79.6055 74.0066 79.6717 74.0066C79.8564 74.0066 80.0143 74.0474 80.1453 74.1275C80.2763 74.2075 80.3994 74.41 80.5146 74.7318C80.6046 74.9829 80.6756 75.1415 80.7293 75.2074C80.7829 75.2733 80.8634 75.3078 80.9708 75.3126V74.027H81.801V75.3126C81.9083 75.3126 81.9888 75.278 82.0441 75.209C82.0993 75.1399 82.1687 74.9814 82.2571 74.7318C82.3708 74.4147 82.4907 74.2138 82.6186 74.1306C82.7464 74.0474 82.9106 74.0066 83.111 74.0066C83.1679 74.0066 83.2799 74.0113 83.4441 74.0207V74.5717C83.2231 74.5717 83.0826 74.5936 83.0211 74.636C82.9595 74.6784 82.8916 74.8071 82.819 75.0222C82.7212 75.311 82.5823 75.4884 82.3992 75.5574C82.6438 75.6202 82.879 75.8698 83.1047 76.303L83.5514 77.171H82.6517L82.2556 76.2622C82.1845 76.1005 82.1182 75.9891 82.0583 75.931C81.9983 75.8714 81.9115 75.8384 81.801 75.8305V77.171H80.9692Z" fill="white"/>
+					</svg>						
+					<strong>Рассписание 815 группы c 6 июня по 11 июня</strong>
+				</a>
+				<button type="button" class="btn btn-warning" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">Изменить параметры</button>
+			</div>			
+		</div>
+	</header>
+	
+	<main role="main">	
+		<div class="album py-1 bg-light">
+			<div class="container-fluid">	
+
+				<div class="row">
+					<!--Понедельник-->
+					<div class="day col-md-2 p-2 shadow rounded">
+						<h4>6 июля, Пн</h3>
+						<div class="card mb-2 shadow-sm">							
+							<div class="card-body">
+								<p class="card-text">Технология производства какашек моржей.</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<small class="text-muted">9 mins</small>
+								</div>
+							</div>
+						</div>
+
+						<div class="card mb-2 shadow-sm">							
+							<div class="card-body">
+								<p class="card-text">Технология производства какашек моржей.</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<small class="text-muted">9 mins</small>
+								</div>
+							</div>
+						</div>
+
+						<div class="card mb-2 shadow-sm">							
+							<div class="card-body">
+								<p class="card-text">Технология производства какашек моржей.</p>
+								<div class="d-flex justify-content-between align-items-center">									
+									<small class="text-muted">9 mins</small>
+								</div>
+							</div>
+						</div>
+
+						<div class="card mb-2 shadow-sm">							
+							<div class="card-body">
+								<p class="card-text">Технология производства какашек моржей.</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<small class="text-muted">9 mins</small>
+								</div>
+							</div>
+						</div>
+						
+						<div class="card mb-2 shadow-sm">							
+							<div class="card-body">
+								<p class="card-text">Технология производства какашек моржей.</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<small class="text-muted">9 mins</small>
+								</div>
+							</div>
+						</div>
+						
+						<div class="card mb-1 shadow-sm">							
+							<div class="card-body">
+								<p class="card-text">Технология производства какашек моржей.</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<small class="text-muted">9 mins</small>
+								</div>
+							</div>
+						</div>	
+					</div><!--/col-->
+
+					<!--Вторник-->
+					<div class="col-md-2 p-2">
+						<h4>7 июля, Вт</h4>
+						<div class="card mb-2 shadow-sm">							
+							<div class="card-body">
+								<p class="card-text">Технология производства какашек моржей.</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<small class="text-muted">9 mins</small>
+								</div>
+							</div>
+						</div>
+
+						<div class="card mb-2 shadow-sm">							
+							<div class="card-body">
+								<p class="card-text">Технология производства какашек моржей.</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<small class="text-muted">9 mins</small>
+								</div>
+							</div>
+						</div>
+
+						<div class="card mb-2 shadow-sm">							
+							<div class="card-body">
+								<p class="card-text">Технология производства какашек моржей.</p>
+								<div class="d-flex justify-content-between align-items-center">									
+									<small class="text-muted">9 mins</small>
+								</div>
+							</div>
+						</div>
+
+						<div class="card mb-2 shadow-sm">							
+							<div class="card-body">
+								<p class="card-text">Технология производства какашек моржей.</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<small class="text-muted">9 mins</small>
+								</div>
+							</div>
+						</div>
+						
+						<div class="card mb-2 shadow-sm">							
+							<div class="card-body">
+								<p class="card-text">Технология производства какашек моржей.</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<small class="text-muted">9 mins</small>
+								</div>
+							</div>
+						</div>
+						
+						<div class="card mb-1 shadow-sm">							
+							<div class="card-body">
+								<p class="card-text">Технология производства какашек моржей.</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<small class="text-muted">9 mins</small>
+								</div>
+							</div>
+						</div>	
+						
+					</div><!--/col-->
+
+					<!--Среда-->
+					<div class="day col-md-2 p-2 shadow rounded">
+						<h4>8 июля, Ср</h4>
+						<div class="card mb-2 shadow-sm">							
+							<div class="card-body">
+								<p class="card-text">Технология производства какашек моржей.</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<small class="text-muted">9 mins</small>
+								</div>
+							</div>
+						</div>
+
+						<div class="card mb-2 shadow-sm">							
+							<div class="card-body">
+								<p class="card-text">Технология производства какашек моржей.</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<small class="text-muted">9 mins</small>
+								</div>
+							</div>
+						</div>
+
+						<div class="card mb-2">							
+							<div class="card-body">
+								<p class="card-text">Технология производства какашек моржей.</p>
+								<div class="d-flex justify-content-between align-items-center">									
+									<small class="text-muted">9 mins</small>
+								</div>
+							</div>
+						</div>
+
+						<div class="card mb-2 shadow-sm">							
+							<div class="card-body">
+								<p class="card-text">Технология производства какашек моржей.</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<small class="text-muted">9 mins</small>
+								</div>
+							</div>
+						</div>
+						
+						<div class="card mb-2 shadow-sm">							
+							<div class="card-body">
+								<p class="card-text">Технология производства какашек моржей.</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<small class="text-muted">9 mins</small>
+								</div>
+							</div>
+						</div>
+						
+						<div class="card mb-1 shadow-sm">							
+							<div class="card-body">
+								<p class="card-text">Технология производства какашек моржей.</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<small class="text-muted">9 mins</small>
+								</div>
+							</div>
+						</div>	
+					</div><!--/col-->
+
+					<!--Четверг-->
+					<div class="col-md-2 p-2">
+						<h4>9 июля, Чт</h4>
+						<div class="card mb-2 shadow-sm">							
+							<div class="card-body">
+								<p class="card-text">Технология производства какашек моржей.</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<small class="text-muted">9 mins</small>
+								</div>
+							</div>
+						</div>
+
+						<div class="card mb-2 shadow-sm">							
+							<div class="card-body">
+								<p class="card-text">Технология производства какашек моржей.</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<small class="text-muted">9 mins</small>
+								</div>
+							</div>
+						</div>
+
+						<div class="card mb-2 shadow-sm">							
+							<div class="card-body">
+								<p class="card-text">Технология производства какашек моржей.</p>
+								<div class="d-flex justify-content-between align-items-center">									
+									<small class="text-muted">9 mins</small>
+								</div>
+							</div>
+						</div>
+
+						<div class="card mb-2 shadow-sm">							
+							<div class="card-body">
+								<p class="card-text">Технология производства какашек моржей.</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<small class="text-muted">9 mins</small>
+								</div>
+							</div>
+						</div>
+						
+						<div class="card mb-2 shadow-sm">							
+							<div class="card-body">
+								<p class="card-text">Технология производства какашек моржей.</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<small class="text-muted">9 mins</small>
+								</div>
+							</div>
+						</div>
+						
+						<div class="card mb-1 shadow-sm">							
+							<div class="card-body">
+								<p class="card-text">Технология производства какашек моржей.</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<small class="text-muted">9 mins</small>
+								</div>
+							</div>
+						</div>	
+						
+					</div><!--/col-->
+
+					<!--Пятница-->
+					<div class="day col-md-2 p-2 shadow rounded">
+						<h4>10 июля, Пт</h4>
+						<div class="card mb-2 shadow-sm">							
+							<div class="card-body">
+								<p class="card-text">Технология производства какашек моржей.</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<small class="text-muted">9 mins</small>
+								</div>
+							</div>
+						</div>
+
+						<div class="card mb-2 shadow-sm">							
+							<div class="card-body">
+								<p class="card-text">Технология производства какашек моржей.</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<small class="text-muted">9 mins</small>
+								</div>
+							</div>
+						</div>
+
+						<div class="card mb-2">							
+							<div class="card-body">
+								<p class="card-text">Технология производства какашек моржей.</p>
+								<div class="d-flex justify-content-between align-items-center">									
+									<small class="text-muted">9 mins</small>
+								</div>
+							</div>
+						</div>
+
+						<div class="card mb-2 shadow-sm">							
+							<div class="card-body">
+								<p class="card-text">Технология производства какашек моржей.</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<small class="text-muted">9 mins</small>
+								</div>
+							</div>
+						</div>
+						
+						<div class="card mb-2 shadow-sm">							
+							<div class="card-body">
+								<p class="card-text">Технология производства какашек моржей.</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<small class="text-muted">9 mins</small>
+								</div>
+							</div>
+						</div>
+						
+						<div class="card mb-2 shadow-sm">							
+							<div class="card-body">
+								<p class="card-text">Технология производства какашек моржей.</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<small class="text-muted">9 mins</small>
+								</div>
+							</div>
+						</div>	
+					</div><!--/col-->
+
+					<!--Суббота-->
+					<div class="col-md-2 p-2">
+						<h4>11 июля, Сб</h4>
+						<div class="card mb-2 shadow-sm">							
+							<div class="card-body">
+								<p class="card-text">Технология производства какашек моржей.</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<small class="text-muted">9 mins</small>
+								</div>
+							</div>
+						</div>
+
+						<div class="card mb-2 shadow-sm">							
+							<div class="card-body">
+								<p class="card-text">Технология производства какашек моржей.</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<small class="text-muted">9 mins</small>
+								</div>
+							</div>
+						</div>
+
+						<div class="card mb-2 shadow-sm">							
+							<div class="card-body">
+								<p class="card-text">Технология производства какашек моржей.</p>
+								<div class="d-flex justify-content-between align-items-center">									
+									<small class="text-muted">9 mins</small>
+								</div>
+							</div>
+						</div>
+
+						<div class="card mb-2 shadow-sm">							
+							<div class="card-body">
+								<p class="card-text">Технология производства какашек моржей.</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<small class="text-muted">9 mins</small>
+								</div>
+							</div>
+						</div>
+						
+						<div class="card mb-2 shadow-sm">							
+							<div class="card-body">
+								<p class="card-text">Технология производства какашек моржей.</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<small class="text-muted">9 mins</small>
+								</div>
+							</div>
+						</div>
+						
+						<div class="card mb-2 shadow-sm">							
+							<div class="card-body">
+								<p class="card-text">Технология производства какашек моржей.</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<small class="text-muted">9 mins</small>
+								</div>
+							</div>
+						</div>	
+						
+					</div><!--/col-->
+				
+				</div><!--/row-->
+			</div>
+		</div>	
+	</main>
+	
+
+
+	<script src="js/app.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</body>
+</html>
